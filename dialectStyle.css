@@ -1,0 +1,249 @@
+/* Aggiungi questi stili a style.css */
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.dialect-intro {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.language-influence {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.influence-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.influence-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.arabo { background: #e74c3c; color: white; }
+.normanno { background: #3498db; color: white; }
+
+.town-list {
+    list-style: none;
+    padding: 0;
+}
+
+.town-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.literary-card {
+    border-left-color: #2ecc71;
+}
+
+.literary-highlight {
+    background: rgba(46, 204, 113, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border-left: 3px solid #2ecc71;
+}
+
+.status-card {
+    border-left-color: #f1c40f;
+}
+
+.language-stats {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    height: 10px;
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.stat-bar {
+    height: 100%;
+    background: #e74c3c;
+    transition: width 1s ease;
+}
+
+.navigation-buttons {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px !important;
+    padding: 20px;
+    position: relative;
+}
+
+.nav-button {
+    position: relative;
+    text-decoration: none;
+    background: #e74c3c;
+    color: white;
+    border-radius: 25px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    flex: 0 0 auto;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.95);
+}
+
+.nav-button::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.nav-button::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    background: #c0392b;
+    transform: scale(1);
+    padding: 12px 35px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-button:hover::before,
+.nav-button:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-button i {
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover i:first-child {
+    transform: translateX(-3px);
+}
+
+.nav-button:hover i:last-child {
+    transform: translateX(3px);
+}
+main {
+    position: relative;
+    padding: 0 100px !important;
+}
+
+.navigation-buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    max-width: 1400px;
+    top: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.back-to-dialects {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.back-to-dialects .nav-button {
+    background: #c0392b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.back-to-dialects .nav-button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .influence-item {
+        min-width: 100%;
+    }
+    
+    .stat-bar {
+        width: 100% !important;
+    }
+}
+
+.hero {
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    width: 100vw;
+    height: 40vh;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Sovrapposizione per scurire */
+    border-radius: 10px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+  }

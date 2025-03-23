@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dialetti dell'Emilia-Romagna</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome (opzionale) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="dialectStyle.css">
+
+  <style>
+    /* HERO FULL-WIDTH */
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Regione-Emilia-Romagna-Stemma.svg.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      justify-content: left;
+      position: relative;
+      width: 100vw;
+      height: 40vh;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    /* Card personalizzate */
+    .dialect-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    .dialect-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .dialect-card h2 {
+      color: #e74c3c; 
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO FULL-WIDTH -->
+  <div class="container-fluid hero">
+    <div class="hero-overlay text-center">
+      <h1>Dialetti dell'Emilia-Romagna</h1>
+      <p>Una ricca varietà linguistica nel cuore dell'Italia settentrionale</p>
+    </div>
+  </div>
+
+  <!-- SEZIONE CONTENUTI PRINCIPALI -->
+  <main class="container my-5">
+    <!-- Tre colonne con Bootstrap -->
+    <div class="row g-4 mb-5">
+      <!-- Card 1: Termini più usati -->
+      <div class="col-md-4">
+        <div class="dialect-card">
+          <h2>Termini Più Usati</h2>
+          <p>
+            <strong>Emiliano:</strong><br>
+            <strong>Al lè</strong>: Lui è<br>
+            <strong>Avdéir</strong>: Vedere<br>
+            <strong>Fèr</strong>: Fare<br>
+            <strong>Magnèr</strong>: Mangiare<br>
+            <strong>Andèr</strong>: Andare<br><br>
+            <strong>Romagnolo:</strong><br>
+            <strong>U s'è</strong>: Lui è<br>
+            <strong>Vdé</strong>: Vedere<br>
+            <strong>Fé</strong>: Fare<br>
+            <strong>Magné</strong>: Mangiare<br>
+            <strong>Andé</strong>: Andare
+          </p>
+          <p>Questi termini sono comunemente utilizzati nelle parlate quotidiane emiliane e romagnole.</p>
+        </div>
+      </div>
+      <!-- Card 2: Detti Locali -->
+      <div class="col-md-4">
+        <div class="dialect-card">
+          <h2>Detti Locali</h2>
+          <p><em>“Chi va pian, va lontan”</em>:  
+            <br>Chi va piano, va lontano. (Emiliano)
+          </p>
+          <p><em>“Aqua chieta, la rovina i ponti”</em>:  
+            <br>Acqua cheta, rovina i ponti. (Romagnolo)
+          </p>
+        </div>
+      </div>
+      <!-- Card 3: Influenze Linguistiche -->
+      <div class="col-md-4">
+        <div class="dialect-card">
+          <h2>Influenze Linguistiche</h2>
+          <p>
+            <strong>Latino</strong> (origine principale)<br>
+            <strong>Lingue celtiche</strong> (sostrato)<br>
+            <strong>Lingue germaniche</strong> (invasioni barbariche)<br>
+            <strong>Francese</strong> (influenze storiche)<br>
+            <strong>Lingue lombarde</strong> (vicinanza geografica)
+          </p>
+          <p>I dialetti dell'Emilia-Romagna hanno assorbito influenze da diverse lingue nel corso della loro storia.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sezione storia (box grande, full width su desktop) -->
+    <div class="row">
+      <div class="col-12">
+        <div class="dialect-card">
+          <h2>Storia dei Dialetti dell'Emilia-Romagna</h2>
+          <p>
+            I dialetti dell'Emilia-Romagna appartengono al gruppo delle lingue gallo-italiche e si suddividono principalmente in due macro-aree: l'emiliano e il romagnolo. L'emiliano è parlato nelle province di Piacenza, Parma, Reggio Emilia, Modena, Bologna e Ferrara, mentre il romagnolo è diffuso nelle province di Ravenna, Forlì-Cesena, Rimini e nella Repubblica di San Marino. Questi dialetti hanno origini nel latino volgare, con influenze celtiche, germaniche e francesi. La Regione Emilia-Romagna tutela e valorizza questi dialetti tramite una legge del 2014, riconoscendo la loro importanza culturale e storica.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="navigation-buttons">
+      <a href="lombardi.html" class="nav-button" data-tooltip="Dialetto Lombardo" 
+         style="margin-right: auto">
+          <i class="fas fa-chevron-left"></i>
+      </a>
+      
+      <a href="liguri.html" class="nav-button" data-tooltip="Dialetti Liguri"
+         style="margin-left: auto">
+          <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  
+  </main>
+  <div class="back-to-dialects">
+    <a href="dialetti.html" class="nav-button">
+        <i class="fas fa-arrow-left"></i> Torna ai Dialetti
+    </a>
+</div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2023 - Tutti i diritti riservati | Progetto Dialetti</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr
+::contentReference[oaicite:0]{index=0}
+ 

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialetti Italiani</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Collegamento alla libreria Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+
+
+    <meta name="DC.Title" content="Dialetti Italiani">
+
+    <meta name="DC.Subject" content="Dialetti, Linguistica, Italia">
+
+    <meta name="DC.Description" content="Progetto dedicato alla scoperta dei dialetti italiani">
+
+    <meta name="DC.Publisher" content="Trotta Matteo Pio">
+
+    <meta name="DC.Language" content="it">
+</head>
+<body>
+    <header>
+        <!-- Pulsante per il menu mobile -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Barra laterale del menu di navigazione -->
+        <nav class="sidebar-menu" id="sidebarMenu">
+            <div class="sidebar-nav">
+                <button class="nav-button" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home button-icon"></i>Home
+                </button>
+                <button class="nav-button" onclick="window.location.href='dialetti.html'" >
+                    <i class="fas fa-map-marked-alt button-icon"></i>Dialetti
+                </button>
+                <button class="nav-button">
+                    <i class="fas fa-info-circle button-icon"></i>About
+                </button>
+                <button class="nav-button" onclick="window.location.href='contatti.html'">
+                    <i class="fas fa-envelope button-icon"></i>Contatti
+                </button>
+                <button class="nav-button" onclick="window.location.href='mappa.html'">
+                    <i class="fas fa-map-marked-alt button-icon"></i> Mappa Dialetti
+                </button>
+                
+            </div>
+        </nav>
+        
+        
+    </header>
+    <article>
+        <div class="hero-text">
+          <h1>Contattaci</h1>
+          <p>Lascia un commento oppure scrivici per suggerimenti, domande o collaborazioni!</p>
+        </div>
+      </article>
+      
+      <section class="contact-section">
+        <div class="contact-form-container">
+          <form action="#" method="POST" class="contact-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="messaggio">Messaggio:</label>
+            <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+      
+            <button type="submit" class="nav-button">
+              <i class="fas fa-paper-plane"></i> Invia Messaggio
+            </button>
+          </form>
+        </div>
+      </section>
+      
+      <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>© 2025 Dialetti Italiani - Tutti i diritti riservati</p>
+      </footer>
+      <!-- Script per la gestione del menu laterale -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebarMenu = document.getElementById('sidebarMenu');
+        const body = document.body;
+    
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            body.classList.toggle('menu-open');
+        });
+    
+        document.addEventListener('click', (e) => {
+            if(body.classList.contains('menu-open')) {
+                body.classList.remove('menu-open');
+            }
+        });
+    
+        sidebarMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html>
