@@ -1,0 +1,235 @@
+<!-- Crea un nuovo file dialetti.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialetti Italiani</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+
+    <meta name="DC.Title" content="Dialetti Italiani">
+
+    <meta name="DC.Subject" content="Dialetti, Linguistica, Italia">
+
+    <meta name="DC.Description" content="Progetto dedicato alla scoperta dei dialetti italiani">
+
+    <meta name="DC.Publisher" content="Trotta Matteo Pio">
+
+    <meta name="DC.Language" content="it">
+
+    <style>
+        .dialect-card {
+            aspect-ratio: 1 / 1;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .dialect-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .dialect-info {
+            position: relative;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        .carousel-container {
+            position: relative;
+            padding: 0 40px;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #e74c3c;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .carousel-nav.prev {
+            left: 0;
+        }
+
+        .carousel-nav.next {
+            right: 0;
+        }
+
+        .dialect-card {
+            height: 400px;
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .dialect-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .dialect-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-light {
+            background-color: rgba(255,255,255,0.9);
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Pulsante per il menu mobile -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Barra laterale del menu di navigazione -->
+        <nav class="sidebar-menu" id="sidebarMenu">
+            <div class="sidebar-nav">
+                <button class="nav-button" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home button-icon"></i>Home
+                </button>
+                <button class="nav-button" onclick="window.location.href='dialetti.html'" >
+                    <i class="fas fa-map-marked-alt button-icon"></i>Dialetti
+                </button>
+                <button class="nav-button" onclick="window.location.href='contatti.html'">
+                    <i class="fas fa-envelope button-icon"></i>Contatti
+                </button>
+                <button class="nav-button" onclick="window.location.href='mappa.html'">
+                    <i class="fas fa-map-marked-alt button-icon"></i> Mappa Dialetti
+                </button>
+                
+            </div>
+        </nav>
+        
+        
+    </header>
+    
+
+    <main class="container-fluid mt-5" style="max-width: 90%;">
+        <article>
+            <!-- Titolo e sottotitolo -->
+            <div class="page-header">
+                <h1 class="display-4">Dialetti Italiani</h1>
+                <p class="lead">Esplora la ricchezza linguistica della penisola</p>
+            </div>
+        </article>
+        <!-- Barra di ricerca -->
+        <div class="search-bar">
+            <input type="text" class="form-control form-control-lg" 
+                   placeholder="Cerca un dialetto..." id="searchInput">
+        </div>
+
+        <!-- Carousel con card -->
+        <div class="carousel-container">
+            <div class="row g-4 justify-content-center" id="cardCarousel">
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/regno-delle-due-sicilie-1738-1848.jpg');"><div class="dialect-info"><h3>Dialetto Napoletano</h3><p>La voce vibrante del Sud Italia</p><a href="Items/napoletano.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Flag_of_Veneto.png');"><div class="dialect-info"><h3>Dialetto Veneto</h3><p>La parlata elegante del Nord</p><a href="Items/veneto.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Flag_of_Sicily.png');"><div class="dialect-info"><h3>Dialetto Siciliano</h3><p>Il suono antico della Sicilia</p><a href="Items/siciliano.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Flag_of_Sardinia.png');"><div class="dialect-info"><h3>Dialetto Sardo</h3><p>Una lingua unica e antica</p><a href="Items/sardo.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Flag_of_Piedmont.png');"><div class="dialect-info"><h3>Dialetti Piemontesi</h3><p>La ricca tradizione del Piemonte</p><a href="Items/piemontesi.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Flag_of_Lombardy_square.svg.png');"><div class="dialect-info"><h3>Dialetti Lombardi</h3><p>La varietà linguistica della Lombardia</p><a href="Items/lombardi.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Regione-Emilia-Romagna-Stemma.svg.png');"><div class="dialect-info"><h3>Dialetti Emiliano-Romagnoli</h3><p>Le sonorità dell'Emilia-Romagna</p><a href="Items/emiliaRomagna.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Flag_of_Liguria.png');"><div class="dialect-info"><h3>Dialetti Liguri</h3><p>Il fascino della Liguria</p><a href="Items/liguri.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Flag_of_Lazio.png');"><div class="dialect-info"><h3>Dialetti Laziali</h3><p>La parlata della capitale e della regione Lazio</p><a href="Items/laziali.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Flag_of_Apulia.png');"><div class="dialect-info"><h3>Dialetti Pugliesi</h3><p>Le varietà linguistiche della Puglia</p><a href="Items/puglia.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Coat_of_arms_of_Calabria.png');"><div class="dialect-info"><h3>Dialetti Calabresi</h3><p>Le lingue e le tradizioni della Calabria</p><a href="Items/calabria.html" class="btn btn-light">Scopri di più</a></div></div></div>
+                <div class="col-12 col-sm-6 col-md-3"><div class="dialect-card" style="background-image: url('images/Flag_of_Marche.png');"><div class="dialect-info"><h3>Dialetti Marchigiani</h3><p>Le sfumature linguistiche delle Marche</p><a href="Items/marche.html" class="btn btn-light">Scopri di più</a></div></div></div>
+              </div>              
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2023 Dialetti Italiani - Tutti i diritti riservati</p>
+    </footer>
+
+    
+
+
+    <!-- Script per il menu laterale e per barra di ricerca -->
+     <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebarMenu = document.getElementById('sidebarMenu');
+        const body = document.body;
+    
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            body.classList.toggle('menu-open');
+        });
+    
+        document.addEventListener('click', (e) => {
+            if(body.classList.contains('menu-open')) {
+                body.classList.remove('menu-open');
+            }
+        });
+    
+        sidebarMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.col-md-3');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            let hasVisibleCards = false;
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(searchTerm) || searchTerm === '') {
+                    card.style.display = 'block';
+                    hasVisibleCards = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Mostra un messaggio se non ci sono risultati
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            if (!hasVisibleCards) {
+                if (!noResultsMessage) {
+                    const message = document.createElement('p');
+                    message.id = 'noResultsMessage';
+                    message.textContent = 'Nessun dialetto trovato.';
+                    message.style.textAlign = 'center';
+                    message.style.color = 'red';
+                    message.style.fontWeight = 'bold';
+                    document.querySelector('.carousel-container').appendChild(message);
+                }
+            } else {
+                if (noResultsMessage) noResultsMessage.remove();
+            }
+        });
+        </script>
+</body>
+</html>
+
