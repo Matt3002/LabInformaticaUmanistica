@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialetto Napoletano</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style/dialectStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+
+
+    <meta name="DC.Title" content="Dialetti Italiani">
+
+    <meta name="DC.Subject" content="Dialetti, Linguistica, Italia">
+
+    <meta name="DC.Description" content="Progetto dedicato alla scoperta dei dialetti italiani">
+
+    <meta name="DC.Publisher" content="Trotta Matteo Pio">
+
+    <meta name="DC.Language" content="it">
+    <style>
+        /* HERO FULL-WIDTH */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/regno-delle-due-sicilie-1738-1848.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: left;
+            position: relative;
+            width: 100vw;
+            height: 40vh;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        /* Card personalizzate */
+        .dialect-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .dialect-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .dialect-card h2 {
+            color: #e74c3c; 
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO FULL-WIDTH -->
+  <div class="container-fluid hero">
+    <div class="hero-overlay text-center">
+      <h1>Dialetto Napoletano</h1>
+      <p>Uno dei dialetti più influenti e diffusi d'Italia</p>
+    </div>
+  </div>
+
+  <!-- SEZIONE CONTENUTI PRINCIPALI -->
+  <main class="container my-5">
+    <div class="row g-4 mb-5">
+      <!-- Card 1: Termini più usati -->
+      <div class="col-md-4">
+        <div typeof="dc:Text" resource="#termini-napoletani" class="dialect-card">
+          <h2 property="dc:title">Termini Più Usati</h2>
+          <p property="dc:description">
+            <strong>Guaglione</strong>: Ragazzo <br>
+            <strong>Fravecà</strong>: Costruire <br>
+            <strong>Maronn’</strong>: Espressione di stupore <br>
+            <strong>Scetate</strong>: Svegliati <br>
+            <strong>Jammo</strong>: Andiamo
+          </p>
+          <meta property="dc:subject" content="Lessico Napoletano" />
+          <meta property="dc:language" content="it" />
+        </div>        
+      </div>
+      <!-- Card 2: Detti Locali -->
+      <div class="col-md-4">
+        <div typeof="dc:Text" resource="#detti-napoletani" class="dialect-card">
+          <h2 property="dc:title">Detti Locali</h2>
+          <p property="dc:description">
+            “Chiagne e fotte”: si riferisce a chi si lamenta ma alla fine ne trae vantaggio.
+          </p>
+          <p>
+            “A maronn t’accumpagna”: espressione di buon auspicio per chi parte.
+          </p>
+          <meta property="dc:subject" content="Proverbi e Modi di Dire" />
+          <meta property="dc:language" content="it" />
+        </div>
+      </div>
+      <!-- Card 3: Influenze Linguistiche -->
+      <div class="col-md-4">
+        <div typeof="dc:Text" resource="#influenze-napoletano" class="dialect-card">
+          <h2 property="dc:title">Influenze Linguistiche</h2>
+          <p property="dc:description">
+            <strong>Latino</strong> (origine principale) <br>
+            <strong>Greco</strong> (influenza fonetica) <br>
+            <strong>Francese</strong> (dominazione angioina) <br>
+            <strong>Spagnolo</strong> (dominazione borbonica) <br>
+            <strong>Arabo</strong> (influenze nei termini marinari)
+          </p>
+          <p>Il napoletano ha assorbito parole e suoni da diverse lingue, riflettendo la sua storia.</p>
+          <meta property="dc:subject" content="Contaminazioni Linguistiche" />
+          <meta property="dc:language" content="it" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Sezione storia -->
+    <div class="row">
+      <div class="col-12">
+        <div typeof="dc:Text" resource="#storia-napoletano" class="dialect-card">
+          <h2 property="dc:title">Storia della Lingua Napoletana</h2>
+          <p property="dc:description">
+            Il napoletano ha origini latine e ha subito influenze da greco, arabo, spagnolo e francese. Nel Medioevo fu utilizzato anche in ambito letterario e amministrativo.
+          </p>
+          <p>
+            Durante il periodo borbonico (XVIII-XIX secolo), divenne lingua di corte. Ancora oggi è parlato in Campania e nel Sud Italia.
+          </p>
+          <meta property="dc:subject" content="Storia Linguistica Regionale" />
+          <meta property="dc:language" content="it" />
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation-buttons">
+      
+      <a href="veneto.html" class="nav-button" data-tooltip="Dialetto Veneto"
+         style="margin-left: auto">
+          <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  
+  </main>
+  <div class="back-to-dialects">
+    <a href="../dialetti.html" class="nav-button">
+        <i class="fas fa-arrow-left"></i> Torna ai Dialetti
+    </a>
+</div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2023 - Tutti i diritti riservati | Progetto Dialetti</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

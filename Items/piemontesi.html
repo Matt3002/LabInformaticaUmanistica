@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dialetto Piemontese</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome (opzionale) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style/dialectStyle.css">
+
+  <style>
+    /* HERO FULL-WIDTH */
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Flag_of_Piedmont.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      justify-content: left;
+      position: relative;
+      width: 100vw;
+      height: 40vh;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    /* Card personalizzate */
+    .dialect-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    .dialect-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .dialect-card h2 {
+      color: #e74c3c; 
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO FULL-WIDTH -->
+  <div class="container-fluid hero">
+    <div class="hero-overlay text-center">
+      <h1>Dialetto Piemontese</h1>
+      <p>Una lingua romanza del Nord Italia con una ricca tradizione culturale</p>
+    </div>
+  </div>
+
+  <!-- SEZIONE CONTENUTI PRINCIPALI -->
+  <main class="container my-5">
+    <!-- Tre colonne con Bootstrap -->
+    <div class="row g-4 mb-5">
+      <!-- Card 1: Termini più usati -->
+      <div class="col-md-4">
+        <div class="dialect-card">
+          <h2>Termini Più Usati</h2>
+          <p>
+            <strong>Masnà</strong>: Bambino <br>
+            <strong>Gadan</strong>: Sciocco <br>
+            <strong>Fròcia</strong>: Frittata <br>
+            <strong>Barot</strong>: Ragazzo <br>
+            <strong>Gòj</strong>: Gioia
+          </p>
+          <p>Questi termini sono comunemente utilizzati nella parlata quotidiana piemontese.</p>
+        </div>
+      </div>
+      <!-- Card 2: Detti Locali -->
+      <div class="col-md-4">
+        <div class="dialect-card">
+          <h2>Detti Locali</h2>
+          <p><em>“Capì Roma për toma”</em>:  
+            <br>Confondere una cosa per un'altra. 
+          </p>
+          <p><em>“Bogianen”</em>:  
+            <br>Letteralmente "non ti muovere", indica la tenacia e la fermezza dei piemontesi.
+          </p>
+        </div>
+      </div>
+      <!-- Card 3: Influenze Linguistiche -->
+      <div class="col-md-4">
+        <div class="dialect-card">
+          <h2>Influenze Linguistiche</h2>
+          <p>
+            <strong>Latino</strong> (origine principale) <br>
+            <strong>Francese</strong> (vicinanza geografica e storica) <br>
+            <strong>Occitano</strong> (presenza nelle valli piemontesi) <br>
+            <strong>Liguri</strong> (influenze nelle zone meridionali)
+          </p>
+          <p>Il piemontese ha assorbito influenze da diverse lingue nel corso della sua storia.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sezione storia (box grande, full width su desktop) -->
+    <div class="row">
+      <div class="col-12">
+        <div class="dialect-card">
+          <h2>Storia della Lingua Piemontese</h2>
+          <p>
+            Il piemontese è una lingua romanza appartenente al gruppo delle lingue gallo-italiche, parlata principalmente nella regione Piemonte. Ha origini latine e ha subito influenze da lingue celtiche, germaniche e francesi. Nel corso dei secoli, il piemontese ha sviluppato una ricca tradizione letteraria e culturale, con poeti e scrittori che hanno contribuito alla sua diffusione e valorizzazione. Nonostante la crescente influenza dell'italiano, il piemontese mantiene una presenza significativa nella cultura e nella società regionale.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="navigation-buttons">
+      <a href="sardo.html" class="nav-button" data-tooltip="Dialetto Sardo" 
+         style="margin-right: auto">
+          <i class="fas fa-chevron-left"></i>
+      </a>
+      
+      <a href="lombardi.html" class="nav-button" data-tooltip="Dialetto Lombardo"
+         style="margin-left: auto">
+          <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  
+  </main>
+  <div class="back-to-dialects">
+    <a href="../dialetti.html" class="nav-button">
+        <i class="fas fa-arrow-left"></i> Torna ai Dialetti
+    </a>
+</div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2023 - Tutti i diritti riservati | Progetto Dialetti</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

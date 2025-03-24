@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa dei Dialetti Italiani</title>
+    
+    <!-- Collegamenti comuni a index.html -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+
+    <meta name="DC.Title" content="Dialetti Italiani">
+
+    <meta name="DC.Subject" content="Dialetti, Linguistica, Italia">
+
+    <meta name="DC.Description" content="Progetto dedicato alla scoperta dei dialetti italiani">
+
+    <meta name="DC.Publisher" content="Trotta Matteo Pio">
+
+    <meta name="DC.Language" content="it">
+
+    <style>
+       /* Adattamento stile mappa */
+        .storymap-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header come in index.html -->
+    <header>
+        <!-- Pulsante per il menu mobile -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Barra laterale del menu di navigazione -->
+        <nav class="sidebar-menu" id="sidebarMenu">
+            <div class="sidebar-nav">
+                <button class="nav-button" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home button-icon"></i>Home
+                </button>
+                <button class="nav-button" onclick="window.location.href='dialetti.html'" >
+                    <i class="fas fa-map-marked-alt button-icon"></i>Dialetti
+                </button>
+                <button class="nav-button" onclick="window.location.href='contatti.html'">
+                    <i class="fas fa-envelope button-icon"></i>Contatti
+                </button>
+                <button class="nav-button" onclick="window.location.href='mappa.html'">
+                    <i class="fas fa-map-marked-alt button-icon"></i> Mappa Dialetti
+                </button>
+                <button class="nav-button" onclick="window.location.href='web_project_plan.html'">
+                    <i class="fas fa-folder-open"></i> Web Project Plan
+                </button>
+                
+            </div>
+        </nav>
+        
+        
+    </header>
+
+    <!-- Hero Image -->
+    <article class="hero">
+        <div class="hero-content">
+            <h1 class="display-4">Mappa dei Dialetti Italiani</h1>
+            <p class="lead">Esplora la distribuzione geografica delle varietà linguistiche</p>
+        </div>
+    </article>
+
+    <!-- Contenuto principale -->
+    <main class="container">
+
+        <!-- Mappa interattiva -->
+        <div class="storymap-container">
+            <iframe 
+                src="https://uploads.knightlab.com/storymapjs/081f111afe97f20640b2ff7503d6ed29/dialetti-italiani-2/draft.html" 
+                width="100%" 
+                height="600" 
+                frameborder="0">
+            </iframe>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Dialetti Italiani - Tutti i diritti riservati</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/tuoaccount" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://www.twitter.com/tuoaccount" target="_blank" class="text-white mx-2">
+                <i class="fab fa-twitter fa-lg"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script per il menu laterale (uguale a index.html)
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebarMenu = document.getElementById('sidebarMenu');
+        const body = document.body;
+    
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            body.classList.toggle('menu-open');
+        });
+    
+        document.addEventListener('click', (e) => {
+            if(body.classList.contains('menu-open')) {
+                body.classList.remove('menu-open');
+            }
+        });
+    
+        sidebarMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html>
